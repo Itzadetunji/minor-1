@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 sticky" style="background-color: #44626A;">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <!-- <img src="public/7.svg" alt="" class="mr-[33px] w-[50px] h-[50px]">
+      <span class="tracking-tight mt-10 mr-[100px] iceland-font text-[48px]">My Tracker</span> -->
+      <span class="text-lg tracking-tight ml-[400px]">Good Afternoon User!</span>
+    </div>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+      </div>
+        <img src="public/alarm-bell.svg" class="w-[38px] h-[38px] mr-[30px]" alt="">
+        <img src="public/person.jpeg" class="w-[38px] h-[38px] rounded-full mr-[21px]" alt="">
+        <div class="block">
+          <p class="text-white">Username</p>
+          <p class="text-white">example@gmail.com</p>
+        </div>
+    </div>
+  </nav>
+  <div class="ml-[400px]">
+    <p class="font-light pl-[100px] pt-[70px] text-[30px]">Result Upload</p>
+    <form action="">
+      <div class="w-[500px] h-[360px] bg-[#fff] ml-[100px] rounded-[20px] mt-5">
+        <div>
+          <p class="font-light text-[20px] pl-[30px] pt-[18px]">Level</p>
+          <select class="ml-[30px] text-[20px] mt-[8px] py-[5px] px-[3px] w-[147px] pr-[60px] drop-shadow-lg rounded-[3px]" id="levels">
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+          </select>
+        </div>
+        <div>
+          <p class="font-light text-[20px] pl-[30px] pt-[18px]">Semester</p>
+          <select class="ml-[30px] text-[20px] mt-[8px] py-[5px] px-[3px] pr-[60px] drop-shadow-lg rounded-[3px]" id="levels">
+            <option value="Alpha">Alpha</option>
+            <option value="Omega">Omega</option>
+          </select>
+        </div>
+        <div class="pt-8 pl-8">
+          <input type="file" class="block w-full text-sm file:mr-4 file:py-6 file:px-4 file:rounded-[5px] file:border-0 file:text-sm file:font-semibold file:bg-white file:text-black hover:file:bg-violet-100 file:drop-shadow-lg"/>
+        </div>
+        <div class="mt-5 ml-[360px]">
+          <img src="Public/submit.svg" alt="" class="w-[130px]">
+        </div>
+      </div>
+    </form>
+  </div> 
+  <!-- Sidebar -->
+  <div class="relative fixed">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="md:flex flex-col md:flex-row min-h-[210vh] max-h-full absolute top-[-500px] h-full">
+      <div class="flex flex-col w-full md:w-[350px] text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0 relative" x-data="{ open: false }" style="background-color: #44626A;">
+        <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between absolute top-[-30px]">
+          <img src="public/hamburger.svg" alt="" class="mr-[33px] w-[35px] h-[px]">
+          <a href="#" class="text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline text-[28px] text-white">My Tracker</a>
+        </div>
+        <nav class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
+          <div class="mt-[150px] mb-[40px]">
+            <img src="public/home.svg" class="ml-5 w-[30px] h-[30px]" alt="" style="display: inline;">
+            <a class="px-4 pt-3 text-sm font-extralight text-white rounded-lg dark-mode:bg-gray-700 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:text-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-[28px] mb-[52px]" href="#">Home</a>
+          </div>
+          <div class="mb-[40px]">
+            <img src="public/courses.svg" class="ml-5 w-[30px] h-[30px]" alt="" style="display: inline;">
+            <a class="pl-4 py-2 mt-2 text-sm font-extralight text-white bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:bg-gray-600 dark-mode:focus:text-white  dark-mode:text-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-[28px] mb-[52px]" href="#">Courses</a>
+          </div>
+          <div class="mb-[40px]">
+            <img src="public/student-info.svg" class="ml-5 w-[30px] h-[30px]" alt="" style="display: inline;">
+            <a class="pl-4 py-2 mt-2 text-sm font-extralight text-white bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:text-gray-200 focus:text-gray-900  focus:bg-gray-200 focus:outline-none focus:shadow-outline text-[28px] mb-[52px]" href="#">Student Info</a>
+          </div>
+          <div class="mb-[40px]">
+            <img src="public/settings.svg" class="ml-5 w-[30px] h-[30px]" alt="" style="display: inline;">
+            <a class="pl-4 py-2 mt-2 text-sm font-extralight text-white bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:bg-gray-600 dark-mode:focus:text-white  dark-mode:text-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-[28px] mb-[52px]" href="#">Settings</a>
+          </div>
+          <div class="mt-[140px]">
+            <img src="public/logout.svg" class="ml-5 w-[30px] h-[30px]" alt="" style="display: inline;">
+            <a class="pl-4 py-2 mt-2 text-sm font-extralight text-white bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:bg-gray-600 dark-mode:focus:text-white  dark-mode:text-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-[28px]" href="#">Logout</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
