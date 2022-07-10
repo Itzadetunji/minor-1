@@ -1,2 +1,4 @@
-const dropdown = document.getElementById(dropdown)
-const dropdown_modal = document.getElementById(dropdown_modal)
+const dropdown_toggle = () => {
+  const dropdown_modal = document.getElementById('dropdown_modal')
+  dropdown_modal.classList.toggle("hidden");
+}
