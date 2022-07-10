@@ -6,28 +6,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 sticky" style="background-color: #44626A;">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <!-- <img src="public/7.svg" alt="" class="mr-[33px] w-[50px] h-[50px]">
-      <span class="tracking-tight mt-10 mr-[100px] iceland-font text-[48px]">My Tracker</span> -->
-      <span class="text-lg tracking-tight ml-[400px]">Good Afternoon User!</span>
-    </div>
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-      <div class="text-sm lg:flex-grow">
-      </div>
-        <img src="public/alarm-bell.svg" class="w-[38px] h-[38px] mr-[30px]" alt="">
-        <img src="public/person.jpeg" class="w-[38px] h-[38px] rounded-full mr-[21px]" alt="">
-        <div class="block">
+  <nav class="flex items-center justify-between w-full flex-wrap bg-teal-500 p-6 sticky relative" style="background-color: #44626A;">
+    <!-- <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <img src="public/7.svg" alt="" class="mr-[33px] w-[50px] h-[50px]">
+      <span class="tracking-tight mt-10 mr-[100px] iceland-font text-[48px]">My Tracker</span>
+    </div> -->
+    <div class="w-full flex lg:items-center lg:w-auto">
+        <div class="flex">
+          <p class="text-[30px] ml-[50px] text-white iceland-font">My Tracker</p>
+          <img src="Public/arrow.svg" class="ml-[5px]" alt="" onclick="dropdown_toggle()">
+        </div>
+        <p class="text-lg tracking-tight text-white ml-[700px]">Good Afternoon User!</p>
+        <img src="public/alarm-bell.svg" class="w-[38px] h-[38px] ml-[30px]" alt="">
+        <img src="public/person.jpeg" class="w-[38px] h-[38px] rounded-full ml-[30px]" alt="">
+        <div class="flex-col ml-[10px]">
           <p class="text-white">Username</p>
           <p class="text-white">example@gmail.com</p>
+        </div> 
+    </div>
+    <div class="w-[240px] h-[300px] absolute bg-[#44626A] top-[94px] left-[70px] hidden" id="dropdown_modal">
+       <div class="flex flex-col mx-[27px] mt-[40px] space-y-8">
+        <div class="flex flex-row">
+          <img src="Public/home.svg" class="w-6 h-6 item-left" alt="">
+          <a href="index.html"><p class="text-[20px] text-white -mt-[3px] ml-[18px]">Home</p></a>
         </div>
+        <div class="flex flex-row">
+          <img src="Public/courses.svg" class="w-6 h-6 item-left" alt="">
+          <p class="text-[20px] text-white -mt-[3px] ml-[18px]">Courses</p>
+        </div>
+        <div class="flex flex-row">
+
+          <img src="Public/student-info.svg" class="w-6 h-6 item-left" alt="">
+          <p class="text-[20px] text-white -mt-[3px] ml-[18px]">Student Info</p>
+        </div>
+        <div class="flex flex-row">
+          <a href="account.html"><img src="Public/settings.svg" class="w-6 h-6 item-left" alt=""></a>
+          <a href="account.html"></a><p class="text-[20px] text-white -mt-[3px] ml-[18px]">Settings</p></a>
+        </div>
+       </div>
     </div>
   </nav>
   <div class="ml-[400px]">
@@ -60,7 +79,7 @@
     </form>
   </div> 
   <!-- Sidebar -->
-  <div class="relative fixed">
+  <!-- <div class="relative fixed">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <div class="md:flex flex-col md:flex-row min-h-[210vh] max-h-full absolute top-[-500px] h-full">
       <div class="flex flex-col w-full md:w-[350px] text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0 relative" x-data="{ open: false }" style="background-color: #44626A;">
@@ -92,6 +111,6 @@
         </nav>
       </div>
     </div>
-  </div>
+  </div> -->
 </body>
 </html>
